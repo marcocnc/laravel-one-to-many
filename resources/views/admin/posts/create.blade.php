@@ -39,6 +39,17 @@
             </div>
 
             <div class="mb-3">
+                <label class="form-label" for="type_id">Tipo di progetto</label>
+                <select class="form-select w-25" name="type_id" id="type_id">
+                    <option value="" selected>Seleziona il tipo di progetto</option>
+                    @foreach ($types as $type)
+                        <option value="{{$type->id}}">{{$type->name}}</option>
+
+                    @endforeach
+                </select>
+            </div>
+
+            <div class="mb-3">
                 <label class="form-label">Immagine</label>
                 <input type="file"
                 class="form-control w-75 mb-2"
