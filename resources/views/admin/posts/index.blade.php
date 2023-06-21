@@ -11,6 +11,7 @@
                     href="{{route('admin.orderby', ['direction' => $direction]) }}">ID</a>
                 </th>
                 <th scope="col">Name</th>
+                <th scope="col">Tipo di progetto</th>
                 <th scope="col">Technologies</th>
                 <th scope="col">Start</th>
                 <th scope="col">End</th>
@@ -27,6 +28,7 @@
                 <tr>
                     <td>{{$post['id']}}</td>
                     <td>{{$post['name']}}</td>
+                    <td><span class="badge text-bg-success">{{$post->type?->name}}</span></td>
                     <td>{{$post['technologies']}}</td>
                     @php
                         $start_date = date_create($post->start);
