@@ -10,7 +10,8 @@
         </p>
 
     </div>
-
+    <h3 class="text-primary">Tipo di progetto</h3>
+    <p class="badge text-bg-success">{{ $post->type?->name }}</p>
     <h3 class="text-primary">Immagine</h3>
     <img src="{{ asset('storage/' . $post->image_path) }}" alt="" width="500">
 
